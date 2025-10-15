@@ -3,7 +3,6 @@ import json
 import argparse
 
 def loadSubtitlefile(jsonconfig: str):
-    #script_dir = os.path.dirname(os.path.abspath(__file__)) + "/"
     if os.path.isfile(jsonconfig):
         with open(jsonconfig, 'r') as file:
             data = json.load(file)
@@ -161,4 +160,4 @@ for subtitlefile in sorted(os.listdir(subtitledir)):
         subtitleout.write(yttcontent)
         subtitleout.close()
 # ytt example formating
-# <p t="14654" d="1101"><s p="0"><s p="1">[SPEAKER_06]: Wer ist da?</s></s></p>
+# <p t="14654" d="1101"><s p="0">Wer ist da?</s></p>
